@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
 
 export default function Hero() {
@@ -14,19 +15,19 @@ export default function Hero() {
           design, I create seamless digital experiences.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
+          <Link
             href="#projects"
             className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700 transition-colors group"
           >
             View Projects
             <MdArrowForward className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="#contact"
             className="inline-flex items-center justify-center px-6 py-3 rounded-xl border-2 border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white transition-colors"
           >
             Contact Me
-          </a>
+          </Link>
         </div>
       </div>
     </section>

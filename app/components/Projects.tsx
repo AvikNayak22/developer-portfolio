@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -85,7 +86,7 @@ export default function Projects() {
                     </div>
                   </div>
                   <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-4">
-                    <a
+                    <Link
                       href={project.liveUrl}
                       className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-500 text-white font-semibold rounded-lg hover:bg-emerald-400 transition-colors duration-300"
                       target="_blank"
@@ -93,8 +94,8 @@ export default function Projects() {
                     >
                       View Live
                       <GoArrowUpRight className="h-5 w-5" />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href={project.githubUrl}
                       className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-emerald-500 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-300"
                       target="_blank"
@@ -102,7 +103,7 @@ export default function Projects() {
                     >
                       View Code
                       <FaGithub className="h-5 w-5" />
-                    </a>
+                    </Link>
                   </div>{" "}
                 </div>
               </div>

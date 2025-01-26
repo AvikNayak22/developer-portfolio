@@ -30,11 +30,11 @@ export default function About() {
           </div>
           <div className="md:w-2/3 space-y-8">
             <p className="text-xl text-gray-300 leading-relaxed">
-              I&apos;m a software engineer who loves building websites and apps
-              that work great and are easy to use. I write clean code
-              that&apos;s easy to maintain and focus on creating solutions that
-              help both users and businesses. I enjoy solving problems and
-              turning ideas into amazing digital experiences.
+              I'm a software engineer who loves building websites and apps that
+              work great and are easy to use. I write clean code that's easy to
+              maintain and focus on creating solutions that help both users and
+              businesses. I enjoy solving problems and turning ideas into
+              amazing digital experiences.
             </p>
             <p className="text-xl text-gray-300 leading-relaxed">
               Beyond development, I am deeply committed to staying current with

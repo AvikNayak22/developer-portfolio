@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -38,7 +38,11 @@ export default function Navbar() {
             className="md:hidden text-gray-300 hover:text-emerald-500"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <FiMenu className="h-6 w-6" />
+            {isMenuOpen ? (
+              <FiX className="h-6 w-6" />
+            ) : (
+              <FiMenu className="h-6 w-6" />
+            )}
           </button>
         </div>
       </div>
