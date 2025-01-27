@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { IoSend } from "react-icons/io5";
+import { motion } from "motion/react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -33,7 +34,18 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-900">
+    <motion.section
+      id="contact"
+      className="py-20 bg-gray-900"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+        delay: 0.2,
+      }}
+    >
       <div className="max-w-screen-xl mx-auto px-4">
         <h2 className="text-4xl font-bold mb-2 text-center text-emerald-500">
           Get in Touch
@@ -110,6 +122,6 @@ export default function Contact() {
           </form>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

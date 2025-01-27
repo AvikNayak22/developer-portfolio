@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
 import { GoArrowUpRight } from "react-icons/go";
+import { motion } from "motion/react";
 
 const projects = [
   {
@@ -42,9 +45,17 @@ export default function Projects() {
         </h2>
         <div className="space-y-20">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300"
+              className="bg-gray-800/50 rounded-xl p-8 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-400 ease-out"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.3,
+              }}
             >
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className={index % 2 === 0 ? "md:order-1" : "md:order-2"}>
@@ -54,9 +65,9 @@ export default function Projects() {
                       alt={project.title}
                       width={500}
                       height={300}
-                      className="w-full h-auto object-cover transform transition-transform duration-500 hover:scale-110"
+                      className="w-full h-auto object-cover transform transition-transform duration-700 ease-in-out hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out" />
                   </div>
                 </div>
                 <div
@@ -64,7 +75,7 @@ export default function Projects() {
                     index % 2 === 0 ? "md:order-2" : "md:order-1"
                   } space-y-6`}
                 >
-                  <h3 className="text-3xl font-bold text-emerald-400 group-hover:text-emerald-300 transition-colors duration-300">
+                  <h3 className="text-3xl font-bold text-emerald-400 group-hover:text-emerald-300 transition-colors duration-500 ease-in-out">
                     {project.title}
                   </h3>
                   <p className="text-gray-300 text-lg leading-relaxed">
@@ -78,7 +89,7 @@ export default function Projects() {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg text-sm font-medium border border-emerald-500/20 hover:border-emerald-500/40 transition-colors duration-300"
+                          className="px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-lg text-sm font-medium border border-emerald-500/20 hover:border-emerald-500/40 transition-colors duration-500 ease-in-out"
                         >
                           {tech}
                         </span>
@@ -88,7 +99,7 @@ export default function Projects() {
                   <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 pt-4">
                     <Link
                       href={project.liveUrl}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-500 text-white font-semibold rounded-lg hover:bg-emerald-400 transition-colors duration-300"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-500 text-white font-semibold rounded-lg hover:bg-emerald-400 transition-colors duration-500 ease-in-out"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -97,18 +108,18 @@ export default function Projects() {
                     </Link>
                     <Link
                       href={project.githubUrl}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-emerald-500 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-300"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-emerald-500 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-500 ease-in-out"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       View Code
                       <FaGithub className="h-5 w-5" />
                     </Link>
-                  </div>{" "}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}{" "}
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
