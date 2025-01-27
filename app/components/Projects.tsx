@@ -11,28 +11,35 @@ const projects = [
     title: "Syntaxium",
     description:
       "A web-based code editor and execution platform that allows users to write, run, and share code snippets in multiple languages.",
-    image: "/project-2.png",
+    image: "/project-1.png",
     technologies: ["Next.js", "React", "Tailwind CSS", "Convex", "Zustand"],
     liveUrl: "https://syntaxium.vercel.app",
     githubUrl: "https://github.com/AvikNayak22/syntaxium",
   },
   {
-    title: "Weather App",
+    title: "Giphy Clone",
     description:
-      "A weather application that provides real-time weather information using a third-party API.",
+      "A web application that replicates the core functionality of Giphy, allowing users to search and browse through GIFs using the GIPHY API.",
     image: "/project-2.png",
-    technologies: ["React", "OpenWeather API", "CSS Modules"],
-    liveUrl: "#",
-    githubUrl: "https://github.com",
+    technologies: ["React", "GIPHY API", "Tailwind CSS", "React Router"],
+    liveUrl: "https://giphy-clone-1.netlify.app",
+    githubUrl: "https://github.com/AvikNayak22/giphy-ui-Clone",
   },
   {
-    title: "Task Manager",
+    title: "SpendWisely",
     description:
-      "A simple task management application with CRUD functionality.",
-    image: "/project-2.png",
-    technologies: ["React", "LocalStorage", "CSS-in-JS"],
-    liveUrl: "#",
-    githubUrl: "https://github.com",
+      "A full-stack expense tracking application with features like transaction management, category filtering, and expense analytics built using the MERN stack.",
+    image: "/project-3.jpg",
+    technologies: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "RTK Query",
+      "Chakra UI",
+    ],
+    liveUrl: "https://spendwisely.pages.dev",
+    githubUrl: "https://github.com/AvikNayak22/spendwisely",
   },
 ];
 
