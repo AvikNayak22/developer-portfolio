@@ -54,7 +54,7 @@ export default function Projects() {
               transition={{
                 duration: 0.6,
                 ease: "easeOut",
-                delay: index * 0.3,
+                delay: index * 0.2,
               }}
             >
               <div className="grid md:grid-cols-2 gap-12 items-center">

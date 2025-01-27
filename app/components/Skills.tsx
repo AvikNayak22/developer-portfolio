@@ -1,3 +1,5 @@
+"use client";
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -14,6 +16,7 @@ import {
   SiPostgresql,
   SiExpress,
 } from "react-icons/si";
+import { motion } from "motion/react";
 
 const skills = [
   { name: "HTML5", icon: FaHtml5, color: "text-orange-500" },
@@ -29,6 +32,7 @@ const skills = [
   { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400" },
   { name: "Git", icon: FaGitAlt, color: "text-red-500" },
 ];
+
 export default function Skills() {
   return (
     <section id="skills" className="py-20 bg-gray-800">
@@ -41,16 +45,20 @@ export default function Skills() {
           of the key technologies I work with:
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-          {skills.map((skill) => (
-            <div
+          {skills.map((skill, index) => (
+            <motion.div
               key={skill.name}
               className="flex flex-col items-center justify-center p-4 bg-gray-700 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-600"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
             >
               <skill.icon className={`text-4xl ${skill.color} mb-3`} />
               <span className="text-center text-sm text-gray-300">
                 {skill.name}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

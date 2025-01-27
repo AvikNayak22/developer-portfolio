@@ -18,12 +18,12 @@ export default function About() {
         </h2>
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-1/3">
-            <div className="relative group w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]">
+            <div className="relative group w-[350px] h-[350px] md:w-[400px] md:h-[400px] ">
               <Image
                 src="/profile-photo.jpg"
                 alt="profile-photo"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 className="rounded-full w-full h-full mx-auto border-4 border-emerald-400 shadow-2xl relative z-10 object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
