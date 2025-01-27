@@ -5,7 +5,7 @@ const socialLinks = [
   { name: "GitHub", url: "https://github.com/AvikNayak22", icon: FaGithub },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/avik-nayak",
+    url: "https://www.linkedin.com/in/avik-nayak",
     icon: FaLinkedin,
   },
   { name: "Email", url: "mailto:jnayakavik19@gmail.com", icon: MdEmail },

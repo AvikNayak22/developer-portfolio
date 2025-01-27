@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
+import { motion } from "motion/react";
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -50,15 +51,21 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {navItems.map((item) => (
-              <Link
+            {navItems.map((item, index) => (
+              <motion.div
                 key={item.name}
-                href={item.href}
-                className="block px-3 py-2 text-gray-300 hover:text-emerald-500 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.2, delay: index * 0.2 }}
               >
-                {item.name}
-              </Link>
+                <Link
+                  href={item.href}
+                  className="block px-3 py-2 text-gray-300 hover:text-emerald-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
