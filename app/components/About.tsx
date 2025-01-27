@@ -21,7 +21,7 @@ export default function About() {
             <div className="relative group">
               <Image
                 src="/profile-photo.jpg"
-                alt="John Doe"
+                alt="profile photo"
                 width={400}
                 height={400}
                 className="rounded-full mx-auto border-4 border-emerald-400 shadow-2xl relative z-10 object-cover transition-transform duration-300 group-hover:scale-105"
