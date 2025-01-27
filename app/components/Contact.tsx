@@ -39,7 +39,7 @@ export default function Contact() {
           Get in Touch
         </h2>
         <p className="text-gray-400 text-lg text-center mb-12">
-          Let's work together on something amazing
+          Let&apos;s work together on something amazing
         </p>
         <div className="max-w-md mx-auto bg-gray-800/50 p-8 rounded-lg shadow-xl backdrop-blur-sm">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
